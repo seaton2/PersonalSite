@@ -1,0 +1,49 @@
+/* 
+Sean Eaton
+navbar.css
+Contains navbar transitions
+*/
+
+#navbar {
+	border:none;
+	text-align:center;
+}
+
+#navbar td {
+	font-color:#339999;
+	border:1px solid #339999;
+	background-image:url(images/buttonBG.jpg);
+	background-repeat:no-repeat;
+}
+
+#navbar td:hover {
+	background-image:url(images/buttonBGOver.jpg);
+	background-repeat:no-repeat;
+	font-color:#00FFFF;
+}
+
+a#navlink {
+	display:block;
+	width:100%;
+	height:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#339999;
+}
+
+a#navlink:hover {
+	color:#00FFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+}
+
+a#link {
+	color:#339999;
+}
+
+a#link:hover {
+	color:#00FFFF;
+}

@@ -1,0 +1,55 @@
+/* 
+Sean Eaton
+css.css
+Contains Body BG and MyWork transitions
+*/
+
+body {
+	background-color:black;
+	overflow:auto;
+}
+
+.esu { 
+	width:200px;
+	height:40px;
+	background-size: 100% auto; 
+	display:block; 
+	background-image: url('images/myWork/EatonServicesUnlimited.png'); 
+} 
+
+.esu:hover { 
+	background-image: url('images/myWork/EatonServicesUnlimitedOver.png'); 
+}
+
+.pbgc { 
+	width:200px;
+	height:40px;
+	background-size: 100% auto; 
+	display:block; 
+	background-image: url('images/myWork/PalmBeachGolfCenter.png'); 
+} 
+
+.pbgc:hover { 
+	background-image: url('images/myWork/PalmBeachGolfCenterOver.png'); 
+}
+
+.style1 {color: #00FFFF}
+.style2 {color: #FFFFFF}
+.style3 {
+	font-size: 24px;
+	color: #FFFFFF;
+}
+
+.style4 {
+	color:#00FFFF;
+	font-size:xx-large;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	font-weight:bold;
+}
+
+#span1 {
+	color:#00FFFF;
+	font-size:large;
+	font-weight:bold;
+}

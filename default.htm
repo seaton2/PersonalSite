@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sean Eaton's Homepage</title>
+
+<script language="JavaScript1.2">
+
+var howOften = 2; //number often in seconds to rotate
+var current = 0; //start the counter at 0
+var ns6 = document.getElementById&&!document.all; //detect netscape 6
+
+// place your images, text, etc in the array elements here
+var items = new Array();
+    items[0]="<a href='default.htm'><img alt='Welcome' src='images/welcome.jpg' height='420' width='480' border='0' /></a>";
+    items[1]="<br /><br /><br /><a href='myWork.htm'><img alt='image1' src='images/DSC00258.jpg' height='350' width='460' border='0' /></a>";
+    items[2]="<br /><br /><br /><a href='myWork.htm'><img alt='image2' src='images/DSC00266.jpg' height='350' width='460' border='0' /></a>";
+    items[3]="<br /><br /><br /><a href='myWork.htm'><img alt='image3' src='images/DSC00277.jpg' height='350' width='460' border='0' /></a>";
+    items[4]="<br /><br /><br /><a href='myWork.htm'><img alt='image4' src='images/DSC00281.jpg' height='350' width='460' border='0' /></a>";
+    items[5]="<br /><br /><br /><a href='myWork.htm'><img alt='image5' src='images/DSC00283.jpg' height='350' width='460' border='0' /></a>";
+function rotater() {
+    document.getElementById("placeholder").innerHTML = items[current];
+    current = (current==items.length-1) ? 0 : current + 1;
+    setTimeout("rotater()",howOften*1000);
+}
+
+function rotater() {
+    if(document.layers) {
+        document.placeholderlayer.document.write(items[current]);
+        document.placeholderlayer.document.close();
+    }
+    if(ns6)document.getElementById("placeholderdiv").innerHTML=items[current]
+        if(document.all)
+            placeholderdiv.innerHTML=items[current];
+
+    current = (current==items.length-1) ? 0 : current + 1; //increment or reset
+    setTimeout("rotater()",howOften*1000);
+}
+window.onload=rotater;
+//-->
+</script>
+
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+</head>
+
+<body>
+<div align="center">
+	<img alt="Banner" src="images/myPageBanner.jpg" />
+</div>
+<br />
+<div align="center">
+<table id="navbar" width="600" border="0">
+  <tr>
+    <td id="navbar" width="16%"><a id="navlink" href="default.htm">Home</a></td>
+    <td id="navbar" width="16%"><a id="navlink" href="myWork.htm">My Work</a></td>
+    <td id="navbar" width="16%"><a id="navlink" href="resume.htm">Resume</a></td>
+    <td id="navbar" width="16%"><a id="navlink" href="links.htm">Links</a></td>
+    <td id="navbar" width="16%"><a id="navlink" href="contacts.htm">Contacts</a></td>
+    <td id="navbar" width="16%"><a id="navlink" href="pictures.htm">Pictures</a></td>
+  </tr>
+</table>
+</div>
+<div align="center">
+	<layer id="placeholderlayer"></layer><div id="placeholderdiv">
+</div>
+
+<p>&nbsp;</p>
+<p><span class="style1"><a id="link" href="default.htm">Home</a> <span class="style2">|</span> <a id="link" href="myWork.htm">My Work</a> <span class="style2">|</span> <a id="link" href="resume.htm">Resume</a> <span class="style2">|</span> <a id="link" href="links.htm">Links</a> <span class="style2">|</span> <a id="link" href="contacts.htm">Contacts</a></span><span class="style2">|</span> <a id="link" href="pictures.htm">Pictures</a></span></p>
+</div>
+</body>
+</html>
